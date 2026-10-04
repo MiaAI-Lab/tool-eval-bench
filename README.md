@@ -1,5 +1,7 @@
 # tool-eval-bench
 
+> Fork of [SeraphimSerapis/tool-eval-bench](https://github.com/SeraphimSerapis/tool-eval-bench). Copyright (c) 2026 SeraphimSerapis, MIT. This is not a MiaAI Lab original.
+
 A **tool-calling quality benchmark** for evaluating LLM tool-use in agentic workflows across open-weight model serving stacks (**vLLM**, **LiteLLM**, **llama.cpp**). Also includes pluggable accuracy benchmarks (**GSM8K**, **MMLU**, **IFEval**) via the same OpenAI-compatible endpoints.
 
 Inspired by [ToolCall-15](https://github.com/stevibe/ToolCall-15), this tool runs **69 deterministic scenarios** (+ 15 opt-in Hard Mode) through OpenAI-compatible `/chat/completions` endpoints, scores each result as **pass**, **partial**, or **fail**, and produces detailed trace reports. Mock tool responses include realistic payload noise (extra metadata, timestamps, nested objects) to test whether models can extract relevant fields from noisy API responses. It also includes an integrated **throughput benchmark** (llama-bench style) for measuring prefill and token generation speed.
